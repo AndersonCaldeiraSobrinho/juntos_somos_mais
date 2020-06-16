@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+	<title>Juntos somos mais</title>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+	<link rel="shortcut icon" href="img/resistencia.png">
+	<link rel="stylesheet" href="css/materialize.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="icons/material.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="cabecalho z-depth-2 row s12 red darken-1">
+		<!-- Dropdown Trigger -->
+		<div>
+			<a class='dropdown-trigger btn' href='#' data-target='dropdown1'><i class="material-icons large">account_circle</i></a>	
+
+			<!-- Dropdown Structure -->
+			<ul id='dropdown1' class='dropdown-content'>
+				<li><a href="#!">one</a></li>
+				<li><a href="#!">two</a></li>
+				<li class="divider" tabindex="-1"></li>
+				<li><a href="#!">three</a></li>
+				<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+				<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+			</ul>
+		</div>
+	</header>
+	<div class="div_corpo">
+		<main class="corpo posicao_2">
+			<section class="seccao_1">
+				<div class="btnEmer">
+					<a data-target="modal1" class="waves-effect waves-light red modal-trigger" href="#modal1"><i class="material-icons large">notifications_active</i></a>
+				</div>
+				<div class="texto">
+					<p>Presssione por 3 segundos</p>
+					<p>Para desativar chamado</p>
+				</div>
+			</section>
+		</main>
+
+		<main id="mapa" class="corpo posicao_3">
+			<section class="seccao_2">
+				<div id="map"></div>
+			</section>
+		</main>
+
+		<main class="corpo posicao_1">
+			<section class="seccao_3 row">
+				<!-- Modal Trigger -->
+				<button data-target="modal2" class="btn-floating modal-trigger right red darken-4" href="modal2"><i class="material-icons">add_circle_outline</i></button>
+				<ul class="row s12">
+					<li class="col s12 z-depth-2 m2">
+						<div class="lista">
+							<p>Anderson</p>
+							<div>
+								<i class="material-icons">
+									<a href="#">delete</a>
+								</i>
+								<i class="material-icons">
+									<a href="#">phone_android</a>
+								</i>
+							</div>
+						</div>
+					</li>
+					<li class="col s12 z-depth-2 m2">
+						<div class="lista">
+							<p>Sara</p>
+							<div>
+								<i class="material-icons">
+									<a href="#">delete</a></i>
+								<i class="material-icons">
+									<a href="#">phone_android</a>
+								</i>
+							</div>
+						</div>
+					</li>
+					<li class="col s12 z-depth-2 m2">
+						<div class="lista">
+							<p>Gustavo</p>
+							<div>
+								<i class="material-icons">
+									<a href="#">delete</a>
+								</i>
+								<i class="material-icons">
+									<a href="#">phone_android</a>
+								</i>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</section>
+		</main>
+
+	</div>
+
+	<footer id="rodape" class="rodape">
+		<a class="waves-effect waves-light btn-large"><i class="material-icons">location_on</i><p>localização</p></a>
+		<a class="waves-effect waves-light btn-large"><i class="material-icons">directions_run</i><p>Ajuda</p></a>
+		<a class="waves-effect waves-light btn-large center"><i class="material-icons">people</i><p>Contatos</p></a>
+	</footer>
+  
+
+
+
+	
+</body>
+
+<!-- Modal do input para encerrar chamada -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+	<h6>Digite sua senha para encerrar</h6>
+	<div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+  </div>
+  <div class="modal-footer">
+	<a href="#!" class="modal-close waves-effect waves-green btn-flat">Enviar</a>
+  </div>
+</div>
+<!-- Fim do modal do input para encerrar chamada -->
+
+<!-- Modal do input para cadastrar contato -->
+<div id="modal2" class="modal">
+	<div class="modal-content">
+	  <h6>Digite sua senha para encerrar</h6>
+		<span class="row s12">
+			<div class="input-field col s8">
+				<input class="s6" type="tel" placeholder="(XX) X.XXXX-XXXX">
+			</div>
+			<div class="input-field col s4">
+				<select>
+					<option value="" disabled selected>N</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+				</select>
+				<label>discagem rapida</label>
+			</div>
+			<div class="input-field col s7">
+				<select>
+					<option value="" disabled selected>Escolha</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+				</select>
+				<label>Ação a realizar</label>
+			</div>
+			<div class="switch input-field col s5">
+				<label>
+					Off
+					<input type="checkbox">
+					<span class="lever"></span>
+					On
+				</label>
+			</div>
+			<div class="input-field col s12">
+				<input class="s12" type="text" placeholder="Escolha a sua mensagem">
+			</div>
+		</span>
+	<div class="modal-footer">
+	  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Enviar</a>
+	</div>
+  </div>
+  <!-- Fim do modal do input para cadastrar contato -->
+
+
+<script src="js/jquery.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/script.js"></script>
+<script src="js/app.js"></script>
+</html>
