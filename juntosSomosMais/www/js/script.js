@@ -56,7 +56,6 @@ function trocaTela(botao) {
               ).css(
                 "box-shadow", "0px 15px 20px #000000"
                 );
-
           localiza.animate({
             left:"0",
             width: "30vw",
